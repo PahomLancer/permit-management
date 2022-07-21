@@ -1,61 +1,11 @@
-# Integration-Template
+# Permit Management Module
 
-The Integration-Template is a template for creating integrations.
- 
-## Repository Name 
-The Repository Name matches to Integration Name.
- 
-## Content
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet interdum egestas. Fusce pharetra tincidunt justo, sed feugiat nisl dignissim id. Pellentesque cursus ac dolor quis fringilla. Sed vel varius massa. Vestibulum ut sollicitudin ex. Vestibulum eu sem ac lorem malesuada placerat. Nunc aliquam sapien eget lectus molestie sollicitudin. Suspendisse non nulla quis justo imperdiet placerat. Pellentesque pellentesque orci eget leo accumsan maximus.
 
-### .integration
-.integration - config file which contains:
-- command - that runs the integration
-- settings_file_name - that contains additional settings
-- default_schedule - that contains default schedule (must be specified in the quartz cron expression format)
-- read_from_stdout - checkbox that indicates that STDOUT is added to Log Trackor
+Praesent euismod vitae sapien quis viverra. Duis ullamcorper massa risus, in feugiat massa dapibus at. Sed et purus iaculis, dapibus dui ac, finibus turpis. Integer justo dolor, mattis vitae varius in, ultrices interdum felis. Vestibulum at nibh lectus. Nunc sollicitudin, nulla sed bibendum commodo, nulla mauris fringilla purus, at scelerisque odio nulla quis est. Nunc malesuada tortor eget sem viverra, ut ultrices risus fringilla. Donec in lectus id augue auctor consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere finibus commodo. Integer luctus metus augue, non convallis massa aliquet eu. Duis varius neque diam, ac hendrerit nunc feugiat at.
 
-Example:
-```
-command = python3 ./SampleIntegration.py
-settings_file_name = settings
-default_schedule = 0 0 0/1 * * ?
-read_from_stdout = false
-```
+Aliquam ut ultricies mauris. Ut elementum libero tempor nisi tristique, sed bibendum nunc lacinia. Nam congue lacinia tellus imperdiet consectetur. Aenean sit amet orci tellus. Mauris id malesuada tortor. Ut in maximus mi. Vestibulum sit amet maximus lectus, eget tincidunt lorem. Fusce lacinia, nisi in porta lobortis, ligula ligula pellentesque libero, sit amet tempus dui felis non nisl. In hac habitasse platea dictumst. Donec pharetra nec sem vitae dictum. Integer eleifend at mi eu aliquam. In a egestas tellus, eget iaculis orci.
 
-### settings
-settings - a file with settings, the name of which can be anything. Integration uses settings file, for example, to get username, password, URL, type. The content and structure of settings file may vary depending on the integration requirements.
+Proin diam metus, iaculis sed neque vitae, sollicitudin laoreet arcu. Cras mi felis, pulvinar sed suscipit non, ultricies in purus. Morbi quis erat in diam congue mattis. Cras at justo magna. Nunc sagittis molestie urna, sed volutpat diam pellentesque eu. Aliquam eget semper tortor, cursus dictum dui. Sed placerat ante vel sem pretium consectetur.
 
-Example:
-```
-SET=daily
-UN=username
-PWD=password
-URL=https://name.onevizion.com
-```
-### Icon
-icon.png is an icon for integration.
-
-The icon must be:
-- In PNG (.png) file format
-- 60x60px
-
-Example:  
- ![example](./icon.png)
-
-### components.xml
-Integration may require some configuration changes. Configuration is standard part of integration and stored in components.xml file. Configuration changes will be applied as part of integration installation.
-
-## Version
-Versions for integration match to the repository tags. If there are no tags, then the Master branch is used.
- 
-## Installation
-The list of available integrations for installation contains only those repositories that contain .integration config file.
-
-The following fields are populated during installation:
-- [Source -> Field]
-- Repository Name -> Integration Name
-- Repository Description -> Description
-- Repository URL -> Repository URL
-- .integration -> command, settings_file_name, default_schedule, read_from_stdout
-- SettingsFileTemplate.integration -> Settings File
-- Selected Tag -> Version
+In non ipsum volutpat, porttitor ex at, rhoncus ante. Duis ornare eros vitae sagittis rutrum. Integer nec felis accumsan, pulvinar sapien non, porttitor elit. Nullam a elementum ex. Nam sed libero porttitor, eleifend libero eget, placerat ex. Aliquam erat volutpat. Sed vel eleifend libero. Vivamus ornare est quis metus mattis auctor. In mollis sapien mauris, sed gravida velit commodo nec. Curabitur efficitur enim a felis sollicitudin, ac maximus massa porta. Ut quis dolor at lacus sagittis luctus non sed ipsum. Ut at euismod lorem. Integer lacinia posuere orci vel aliquam. Phasellus sit amet nulla sit amet justo mollis lobortis. Suspendisse purus sem, tristique id vulputate eget, auctor et enim.
