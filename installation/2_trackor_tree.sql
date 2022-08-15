@@ -22,4 +22,3 @@ begin
     v_rtid2 := pkg_relation.new_relation_type(null, v_permits_ttid, c_rel_cardinality_one_many, 0, 0);     
     v_rtid3 := pkg_relation.new_relation_type(v_jurisdiction_ttid, v_permits_ttid, c_rel_cardinality_one_many, 0, 0);
 end;
-/
