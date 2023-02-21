@@ -1,10 +1,769 @@
-<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="adidenko" description="" name="dev-apps.onevizion.com_BPL_10162022194400.xml" site="https&#x3a;&#x2f;&#x2f;dev-apps.onevizion.com" ts="" ><RULES>
+<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="clear program case 166677 13_admin" description="" name="test.onevizion.com_BPL_02212023150024.xml" site="http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080" ts="" ><RULES>
  <RULES_ITEM>
   <IS_ASYNC>0</IS_ASYNC>
   <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_COUNTDOWN nightly</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678555</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>1032630</RULE_TYPE_ID>
+   <RULE_TYPE>Execute Nightly</RULE_TYPE>
+   <REPEAT_INTERVAL>FREQ=DAILY;BYHOUR=4;</REPEAT_INTERVAL>
+   <START_DATE>02/18/2020 11:32:00</START_DATE>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>야간 실행</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>20</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Exécuter la nuit</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>야간 자정 실행</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>20</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Exécuter la nuit à minuit</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>begin
+    for rec in (
+        select xitor_id
+          from xitor
+         where xitor_type_id = id.permits.tt
+    ) loop
+        permgmt_permit_managment.calc_permit_countdown_and_expected(rec.xitor_id);
+    end loop;
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891800</ITEM_ID>
+    <PKEY>10009678555</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_COUNTDOWN nightly</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>1032630</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678555</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS/>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_COUNTDOWN wtu</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678556</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>1</RULE_TYPE_ID>
+   <RULE_TYPE>After Task Update</RULE_TYPE>
+   <ID_FIELD>WP_TASK_ID</ID_FIELD>
+   <TEMPLATE_SQL>select t.wp_task_id as &quot;Task ID&quot;,
+       t.task_name as &quot;Task Name&quot;,
+       t.order_number &quot;Order Number&quot;,
+       w.name &quot;Workplan Name&quot;,
+       t.wp_task_id as &quot;Task Id&quot;
+from wp_tasks t,
+     wp_workplan w
+where t.wp_workplan_id = w.wp_workplan_id
+      and w.workplan_type = 0</TEMPLATE_SQL>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>declare
+    v_xitor_id number;
+begin
+    select xitor_id
+      into v_xitor_id
+      from wp_tasks
+     where wp_task_id = :wp_task_id;
+    permgmt_permit_managment.calc_permit_countdown_and_expected(v_xitor_id);
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891801</ITEM_ID>
+    <PKEY>10009678556</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_COUNTDOWN wtu</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>1</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678556</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS/>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS>
+   <T_TASK_DATE_IDNUM>
+    <XITOR_TYPE>Permits</XITOR_TYPE>
+    <WP_TEMPLATE>Permit Workplan</WP_TEMPLATE>
+    <TASK_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
+     </T_LABEL>
+    </TASK_LABEL>
+   </T_TASK_DATE_IDNUM>
+  </TASK_IDNUMS>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_EXPECTED</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678557</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>8</RULE_TYPE_ID>
+   <RULE_TYPE>After Configured Field Update</RULE_TYPE>
+   <ID_FIELD>PK</ID_FIELD>
+   <TEMPLATE_SQL>select c.config_field_id as &quot;Config Field ID&quot;,
+c.config_field_name as &quot;Config Field Name&quot;,
+x.xitor_type as &quot;Xitor Type&quot;,
+lbl_pref.label_text || lbl_cf.label_text as &quot;Field Label&quot;,
+c.config_field_id as &quot;Config Field Id&quot;,
+dt.type_name as &quot;Data Type&quot;
+from config_field c
+join xitor_type x on x.xitor_type_id = c.xitor_type_id
+join config_field_data_type dt on dt.config_field_data_type_id = c.data_type
+left join vw_label lbl_cf on c.app_label_id = lbl_cf.label_id and lbl_cf.app_lang_id = :p_lang_id
+left join vw_label lbl_pref on x.prefix_label_id = lbl_pref.label_id and lbl_pref.app_lang_id = :p_lang_id
+where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XITOR_CLASS_ID&apos;)</TEMPLATE_SQL>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>begin
+    permgmt_permit_managment.calc_permit_expected(:pk);
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891802</ITEM_ID>
+    <PKEY>10009678557</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_EXPECTED</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>8</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678557</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS>
+   <T_TYPE_SPECIF_OBJ_IDNUM>
+    <XITOR_TYPE>Permits</XITOR_TYPE>
+    <OBJECT_NAME>PRM_PERMIT_STATUS</OBJECT_NAME>
+   </T_TYPE_SPECIF_OBJ_IDNUM>
+   <T_TYPE_SPECIF_OBJ_IDNUM>
+    <XITOR_TYPE>Permits</XITOR_TYPE>
+    <OBJECT_NAME>PRM_PERMIT_COUNTDOWN</OBJECT_NAME>
+   </T_TYPE_SPECIF_OBJ_IDNUM>
+  </CONFIG_FIELD_IDNUMS>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_EXPIRED nightly</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678558</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>1032630</RULE_TYPE_ID>
+   <RULE_TYPE>Execute Nightly</RULE_TYPE>
+   <REPEAT_INTERVAL>FREQ=DAILY;BYHOUR=4;</REPEAT_INTERVAL>
+   <START_DATE>02/18/2020 11:32:00</START_DATE>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>야간 실행</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>20</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Exécuter la nuit</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>야간 자정 실행</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>20</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Exécuter la nuit à minuit</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>begin
+    for rec in (
+        select xitor_id
+          from xitor
+         where xitor_type_id = id.permits.tt
+    ) loop
+        permgmt_permit_managment.calc_permit_expired_and_days_to_expiration(rec.xitor_id);    
+    end loop;  
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891803</ITEM_ID>
+    <PKEY>10009678558</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <DESCRIPTION>&lt;p&gt;Nightly rule to calculate&amp;nbsp;PRM_PERMIT_EXPIRED field value&lt;/p&gt;
+</DESCRIPTION>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_EXPIRED nightly</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>1032630</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678558</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS/>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_EXPIRED cfu</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678559</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>8</RULE_TYPE_ID>
+   <RULE_TYPE>After Configured Field Update</RULE_TYPE>
+   <ID_FIELD>PK</ID_FIELD>
+   <TEMPLATE_SQL>select c.config_field_id as &quot;Config Field ID&quot;,
+c.config_field_name as &quot;Config Field Name&quot;,
+x.xitor_type as &quot;Xitor Type&quot;,
+lbl_pref.label_text || lbl_cf.label_text as &quot;Field Label&quot;,
+c.config_field_id as &quot;Config Field Id&quot;,
+dt.type_name as &quot;Data Type&quot;
+from config_field c
+join xitor_type x on x.xitor_type_id = c.xitor_type_id
+join config_field_data_type dt on dt.config_field_data_type_id = c.data_type
+left join vw_label lbl_cf on c.app_label_id = lbl_cf.label_id and lbl_cf.app_lang_id = :p_lang_id
+left join vw_label lbl_pref on x.prefix_label_id = lbl_pref.label_id and lbl_pref.app_lang_id = :p_lang_id
+where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XITOR_CLASS_ID&apos;)</TEMPLATE_SQL>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>begin
+    permgmt_permit_managment.calc_permit_expired_and_days_to_expiration(:pk);   
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891804</ITEM_ID>
+    <PKEY>10009678559</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <DESCRIPTION>&lt;p&gt;Rule to calculate&amp;nbsp;PRM_PERMIT_EXPIRED on field update&lt;/p&gt;
+</DESCRIPTION>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_EXPIRED cfu</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>8</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678559</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS>
+   <T_TYPE_SPECIF_OBJ_IDNUM>
+    <XITOR_TYPE>Permits</XITOR_TYPE>
+    <OBJECT_NAME>PRM_EXPIRATION_DATE</OBJECT_NAME>
+   </T_TYPE_SPECIF_OBJ_IDNUM>
+  </CONFIG_FIELD_IDNUMS>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_EXPIRES_BEFORE_CX_S cfu</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678560</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>8</RULE_TYPE_ID>
+   <RULE_TYPE>After Configured Field Update</RULE_TYPE>
+   <ID_FIELD>PK</ID_FIELD>
+   <TEMPLATE_SQL>select c.config_field_id as &quot;Config Field ID&quot;,
+c.config_field_name as &quot;Config Field Name&quot;,
+x.xitor_type as &quot;Xitor Type&quot;,
+lbl_pref.label_text || lbl_cf.label_text as &quot;Field Label&quot;,
+c.config_field_id as &quot;Config Field Id&quot;,
+dt.type_name as &quot;Data Type&quot;
+from config_field c
+join xitor_type x on x.xitor_type_id = c.xitor_type_id
+join config_field_data_type dt on dt.config_field_data_type_id = c.data_type
+left join vw_label lbl_cf on c.app_label_id = lbl_cf.label_id and lbl_cf.app_lang_id = :p_lang_id
+left join vw_label lbl_pref on x.prefix_label_id = lbl_pref.label_id and lbl_pref.app_lang_id = :p_lang_id
+where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XITOR_CLASS_ID&apos;)</TEMPLATE_SQL>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6417</APP_LABEL_ID>
+     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6446</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>declare
+    v_fa_date date;
+    v_fp_date date;
+    v_project_id number;
+begin
+    v_project_id := util.getparentbyid(:pk, id.project.tt);
+    select finish_projected_date,
+           finish_actual_date
+      into v_fp_date,
+           v_fa_date
+      from wp_tasks
+     where xitor_id = v_project_id 
+       and order_number = 7000 
+       and rownum = 1;
+    permgmt_permit_managment.calc_permit_expires_before_cx_s(:pk, v_fa_date, v_fp_date);
+exception when no_data_found then
+    util.setvalnumbyid(:pk, id.permits.cf.prm_permit_expires_before_cx_s, 0);
+    return;
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891805</ITEM_ID>
+    <PKEY>10009678560</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <DESCRIPTION>&lt;p&gt;Rule to calculate field PRM_PERMIT_EXPIRES_BEFORE_CX_S value on fields update.&lt;/p&gt;
+</DESCRIPTION>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_EXPIRES_BEFORE_CX_S cfu</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>8</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678560</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS>
+   <T_TYPE_SPECIF_OBJ_IDNUM>
+    <XITOR_TYPE>Permits</XITOR_TYPE>
+    <OBJECT_NAME>PRM_EXPIRATION_DATE</OBJECT_NAME>
+   </T_TYPE_SPECIF_OBJ_IDNUM>
+  </CONFIG_FIELD_IDNUMS>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>0</IS_ENABLED>
   <RULE>PRM_PERMIT_EXPIRED wtu</RULE>
   <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100006369</RULE_ID>
+  <RULE_ID>10009678561</RULE_ID>
   <RULE_TYPE>
    <RULE_TYPE_ID>55</RULE_TYPE_ID>
    <RULE_TYPE>After Task Date Update</RULE_TYPE>
@@ -35,22 +794,7 @@ from vw_task_template_date</TEMPLATE_SQL>
     <T_LABEL>
      <APP_LANG_ID>10</APP_LANG_ID>
      <APP_LABEL_ID>6440</APP_LABEL_ID>
-     <LABEL_TEXT>업데이트 된 작업 날짜(후)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6440</APP_LABEL_ID>
-     <LABEL_TEXT>Rapport Exécuté (Après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6440</APP_LABEL_ID>
-     <LABEL_TEXT>Date de tâche mise à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6440</APP_LABEL_ID>
-     <LABEL_TEXT>Fecha de actualización de la tarea (Después)</LABEL_TEXT>
+     <LABEL_TEXT>Task Date Updated (After)</LABEL_TEXT>
     </T_LABEL>
    </TYPE_LABELS>
    <DESC_LABELS>
@@ -72,22 +816,7 @@ from vw_task_template_date</TEMPLATE_SQL>
     <T_LABEL>
      <APP_LANG_ID>10</APP_LANG_ID>
      <APP_LABEL_ID>6469</APP_LABEL_ID>
-     <LABEL_TEXT>특정 날짜가 작업에 업데이트 될 때 실행됩니다.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6469</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque le rapport est exécuté (indépendamment de l&apos;état - Succès/Échec)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6469</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsqu&apos;une date spécifique est mise à jour sur une tâche.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6469</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se actualiza una fecha específica en una Tarea.</LABEL_TEXT>
+     <LABEL_TEXT>Executed when a specific date is updated on a Task.</LABEL_TEXT>
     </T_LABEL>
    </DESC_LABELS>
   </RULE_TYPE>
@@ -98,7 +827,7 @@ begin
       into v_xitor_id
       from wp_tasks
      where wp_task_id = :wp_task_id;    
-    pkg_permit_managment.calc_permit_expired_and_days_to_expiration(v_xitor_id);   
+    permgmt_permit_managment.calc_permit_expired_and_days_to_expiration(v_xitor_id);   
 end;</SQL_TEXT>
   <WARNING_LABEL/>
   <RULE_CLASS_PARAM_VALS/>
@@ -106,73 +835,36 @@ end;</SQL_TEXT>
   <RULE_HTTPCALL_PARAMS/>
   <BPD_ITEMS>
    <T_BPD_ITEM>
-    <ITEM_ID>10000615877</ITEM_ID>
-    <PKEY>100006369</PKEY>
+    <ITEM_ID>1000913891806</ITEM_ID>
+    <PKEY>10009678561</PKEY>
     <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
     <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
     <DESCRIPTION>&lt;p&gt;Rule to calculate&amp;nbsp;PRM_PERMIT_EXPIRED on task update&lt;/p&gt;
 </DESCRIPTION>
     <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <NAME>PRM_PERMIT_EXPIRED wtu</NAME>
     <APP_LABEL/>
    </T_BPD_ITEM>
   </BPD_ITEMS>
   <RULE_GEOCODING/>
   <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
   <RULE_TYPE_ID>55</RULE_TYPE_ID>
   <RULE_TOWER_GROUPS/>
   <COMPONENT_PACKAGES>
    <T_BPL_COMP_PKG>
     <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100006369</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
+    <OBJECT_ID>10009678561</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
     <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <BPD_ITEMS/>
     <IS_LOCKED>0</IS_LOCKED>
    </T_BPL_COMP_PKG>
   </COMPONENT_PACKAGES>
   <CONFIG_FIELD_IDNUMS/>
-  <TASK_DATE_IDNUMS>
-   <T_TASK_DATE_IDNUM>
-    <XITOR_TYPE>Project</XITOR_TYPE>
-    <WP_TEMPLATE>Project Workplan</WP_TEMPLATE>
-    <TASK_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>0</APP_LANG_ID>
-      <LABEL_TEXT>Construction Start</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>1</APP_LANG_ID>
-      <LABEL_TEXT>Construction Start</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>5</APP_LANG_ID>
-      <LABEL_TEXT>Construction Start</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>10</APP_LANG_ID>
-      <LABEL_TEXT>건축 시작</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>15</APP_LANG_ID>
-      <LABEL_TEXT>Début de la construction </LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>20</APP_LANG_ID>
-      <LABEL_TEXT>Début de construction</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>25</APP_LANG_ID>
-      <LABEL_TEXT>Inicio de Construcción</LABEL_TEXT>
-     </T_LABEL>
-    </TASK_LABEL>
-    <DATE_TYPE>Actual</DATE_TYPE>
-    <START_FINISH>Finish</START_FINISH>
-   </T_TASK_DATE_IDNUM>
-  </TASK_DATE_IDNUMS>
+  <TASK_DATE_IDNUMS/>
   <TASK_IDNUMS/>
   <TRACKOR_TYPE_IDNUMS/>
   <RELATION_TYPE_IDNUMS/>
@@ -185,9 +877,9 @@ end;</SQL_TEXT>
  <RULES_ITEM>
   <IS_ASYNC>0</IS_ASYNC>
   <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_EXPIRED cfu</RULE>
+  <RULE>PRM_PERMIT_COUNTDOWN cfu</RULE>
   <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100006378</RULE_ID>
+  <RULE_ID>10009678562</RULE_ID>
   <RULE_TYPE>
    <RULE_TYPE_ID>8</RULE_TYPE_ID>
    <RULE_TYPE>After Configured Field Update</RULE_TYPE>
@@ -225,21 +917,6 @@ where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XIT
      <APP_LABEL_ID>6417</APP_LABEL_ID>
      <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
     </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Champ mis à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Campo Actualizado (Después)</LABEL_TEXT>
-    </T_LABEL>
    </TYPE_LABELS>
    <DESC_LABELS>
     <T_LABEL>
@@ -262,25 +939,10 @@ where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XIT
      <APP_LABEL_ID>6446</APP_LABEL_ID>
      <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
     </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Les règles de ce type sera exécuté à minuit.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque la valeur d&apos;un champ est modifiée.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se cambia el valor de un Campo.</LABEL_TEXT>
-    </T_LABEL>
    </DESC_LABELS>
   </RULE_TYPE>
   <SQL_TEXT>begin
-    pkg_permit_managment.calc_permit_expired_and_days_to_expiration(:pk);   
+    permgmt_permit_managment.calc_permit_countdown_and_expected(:pk);
 end;</SQL_TEXT>
   <WARNING_LABEL/>
   <RULE_CLASS_PARAM_VALS/>
@@ -288,30 +950,28 @@ end;</SQL_TEXT>
   <RULE_HTTPCALL_PARAMS/>
   <BPD_ITEMS>
    <T_BPD_ITEM>
-    <ITEM_ID>10000615886</ITEM_ID>
-    <PKEY>100006378</PKEY>
+    <ITEM_ID>1000913891807</ITEM_ID>
+    <PKEY>10009678562</PKEY>
     <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
     <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <DESCRIPTION>&lt;p&gt;Rule to calculate&amp;nbsp;PRM_PERMIT_EXPIRED on field update&lt;/p&gt;
-</DESCRIPTION>
     <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_EXPIRED cfu</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_COUNTDOWN cfu</NAME>
     <APP_LABEL/>
    </T_BPD_ITEM>
   </BPD_ITEMS>
   <RULE_GEOCODING/>
   <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
   <RULE_TYPE_ID>8</RULE_TYPE_ID>
   <RULE_TOWER_GROUPS/>
   <COMPONENT_PACKAGES>
    <T_BPL_COMP_PKG>
     <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100006378</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
+    <OBJECT_ID>10009678562</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
     <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <BPD_ITEMS/>
     <IS_LOCKED>0</IS_LOCKED>
    </T_BPL_COMP_PKG>
@@ -319,9 +979,258 @@ end;</SQL_TEXT>
   <CONFIG_FIELD_IDNUMS>
    <T_TYPE_SPECIF_OBJ_IDNUM>
     <XITOR_TYPE>Permits</XITOR_TYPE>
-    <OBJECT_NAME>PRM_EXPIRATION_DATE</OBJECT_NAME>
+    <OBJECT_NAME>PRM_PERMIT_STATUS</OBJECT_NAME>
    </T_TYPE_SPECIF_OBJ_IDNUM>
   </CONFIG_FIELD_IDNUMS>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>0</IS_ENABLED>
+  <RULE>PRM_PERMIT_EXPIRES_BEFORE_CX_S wtu</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678563</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>1</RULE_TYPE_ID>
+   <RULE_TYPE>After Task Update</RULE_TYPE>
+   <ID_FIELD>WP_TASK_ID</ID_FIELD>
+   <TEMPLATE_SQL>select t.wp_task_id as &quot;Task ID&quot;,
+       t.task_name as &quot;Task Name&quot;,
+       t.order_number &quot;Order Number&quot;,
+       w.name &quot;Workplan Name&quot;,
+       t.wp_task_id as &quot;Task Id&quot;
+from wp_tasks t,
+     wp_workplan w
+where t.wp_workplan_id = w.wp_workplan_id
+      and w.workplan_type = 0</TEMPLATE_SQL>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6413</APP_LABEL_ID>
+     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>6442</APP_LABEL_ID>
+     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>declare
+    v_fa_date date;
+    v_fp_date date;
+    v_project_id number;
+begin
+    select finish_projected_date,
+           finish_actual_date,
+           xitor_id
+      into v_fp_date,
+           v_fa_date,
+           v_project_id
+      from wp_tasks
+     where wp_task_id = :wp_task_id;
+    for rec in (
+        select child_id
+          from relation
+         where relation_type_id = id.project.rel.permits
+           and parent_id = v_project_id
+    ) loop
+        permgmt_permit_managment.calc_permit_expires_before_cx_s(rec.child_id, v_fa_date, v_fp_date);
+    end loop;
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891808</ITEM_ID>
+    <PKEY>10009678563</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <DESCRIPTION>&lt;p&gt;Rule to calculate field PRM_PERMIT_EXPIRES_BEFORE_CX_S value on task update.&lt;/p&gt;
+</DESCRIPTION>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_EXPIRES_BEFORE_CX_S wtu</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>1</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678563</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS/>
+  <TASK_DATE_IDNUMS/>
+  <TASK_IDNUMS/>
+  <TRACKOR_TYPE_IDNUMS/>
+  <RELATION_TYPE_IDNUMS/>
+  <WP_TEMPLATE_IDNUMS/>
+  <WF_TEMPLATE_IDNUMS/>
+  <IMPORT_IDNUMS/>
+  <REPORT_IDNUMS/>
+  <COMPONENT_LABELS/>
+ </RULES_ITEM>
+ <RULES_ITEM>
+  <IS_ASYNC>0</IS_ASYNC>
+  <IS_ENABLED>1</IS_ENABLED>
+  <RULE>PRM_PERMIT_AGE nightly</RULE>
+  <RULE_CLASS_ID>1</RULE_CLASS_ID>
+  <RULE_ID>10009678564</RULE_ID>
+  <RULE_TYPE>
+   <RULE_TYPE_ID>1032630</RULE_TYPE_ID>
+   <RULE_TYPE>Execute Nightly</RULE_TYPE>
+   <REPEAT_INTERVAL>FREQ=DAILY;BYHOUR=4;</REPEAT_INTERVAL>
+   <START_DATE>02/18/2020 11:32:00</START_DATE>
+   <TYPE_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>야간 실행</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>20</APP_LANG_ID>
+     <APP_LABEL_ID>-5549572</APP_LABEL_ID>
+     <LABEL_TEXT>Exécuter la nuit</LABEL_TEXT>
+    </T_LABEL>
+   </TYPE_LABELS>
+   <DESC_LABELS>
+    <T_LABEL>
+     <APP_LANG_ID>0</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>1</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>5</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>10</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>야간 자정 실행</LABEL_TEXT>
+    </T_LABEL>
+    <T_LABEL>
+     <APP_LANG_ID>20</APP_LANG_ID>
+     <APP_LABEL_ID>-5549573</APP_LABEL_ID>
+     <LABEL_TEXT>Exécuter la nuit à minuit</LABEL_TEXT>
+    </T_LABEL>
+   </DESC_LABELS>
+  </RULE_TYPE>
+  <SQL_TEXT>begin
+    for rec in (
+        select xitor_id
+          from xitor
+         where xitor_type_id = id.permits.tt
+    ) loop
+        permgmt_permit_managment.calc_permit_age(rec.xitor_id);
+    end loop;
+end;</SQL_TEXT>
+  <WARNING_LABEL/>
+  <RULE_CLASS_PARAM_VALS/>
+  <RULE_HTTPCALLS/>
+  <RULE_HTTPCALL_PARAMS/>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891809</ITEM_ID>
+    <PKEY>10009678564</PKEY>
+    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <NAME>PRM_PERMIT_AGE nightly</NAME>
+    <APP_LABEL/>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <RULE_GEOCODING/>
+  <RULE_MAP_SNIPPETS/>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <RULE_TYPE_ID>1032630</RULE_TYPE_ID>
+  <RULE_TOWER_GROUPS/>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>4</COMPONENT_ID>
+    <OBJECT_ID>10009678564</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+  <CONFIG_FIELD_IDNUMS/>
   <TASK_DATE_IDNUMS/>
   <TASK_IDNUMS/>
   <TRACKOR_TYPE_IDNUMS/>
@@ -337,7 +1246,7 @@ end;</SQL_TEXT>
   <IS_ENABLED>1</IS_ENABLED>
   <RULE>New Permits</RULE>
   <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100006386</RULE_ID>
+  <RULE_ID>10009678565</RULE_ID>
   <RULE_TYPE>
    <RULE_TYPE_ID>18</RULE_TYPE_ID>
    <RULE_TYPE>After Trackor Create</RULE_TYPE>
@@ -365,22 +1274,7 @@ from xitor_type</TEMPLATE_SQL>
     <T_LABEL>
      <APP_LANG_ID>10</APP_LANG_ID>
      <APP_LABEL_ID>6420</APP_LABEL_ID>
-     <LABEL_TEXT>트랙 생성됨(이후)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6420</APP_LABEL_ID>
-     <LABEL_TEXT>Champ Mis À Jour (Après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6420</APP_LABEL_ID>
-     <LABEL_TEXT>Trackor créé (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6420</APP_LABEL_ID>
-     <LABEL_TEXT>Creado Trackor (Después)</LABEL_TEXT>
+     <LABEL_TEXT>Trackor Created (After)</LABEL_TEXT>
     </T_LABEL>
    </TYPE_LABELS>
    <DESC_LABELS>
@@ -402,27 +1296,12 @@ from xitor_type</TEMPLATE_SQL>
     <T_LABEL>
      <APP_LANG_ID>10</APP_LANG_ID>
      <APP_LABEL_ID>6449</APP_LABEL_ID>
-     <LABEL_TEXT>새 트랙터를 만들 때 실행됩니다.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6449</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque la valeur d&apos;un Champ est modifié.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6449</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsqu&apos;un nouveau suivi est créé.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6449</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se crea un nuevo Trackor.</LABEL_TEXT>
+     <LABEL_TEXT>Executed when a new Trackor is created.</LABEL_TEXT>
     </T_LABEL>
    </DESC_LABELS>
   </RULE_TYPE>
   <SQL_TEXT>begin
-    pkg_permit_managment.new_permit(:xitor_id);  
+    permgmt_permit_managment.new_permit(:xitor_id);  
 end;</SQL_TEXT>
   <WARNING_LABEL/>
   <RULE_CLASS_PARAM_VALS/>
@@ -430,30 +1309,30 @@ end;</SQL_TEXT>
   <RULE_HTTPCALL_PARAMS/>
   <BPD_ITEMS>
    <T_BPD_ITEM>
-    <ITEM_ID>10000615894</ITEM_ID>
-    <PKEY>100006386</PKEY>
+    <ITEM_ID>1000913891810</ITEM_ID>
+    <PKEY>10009678565</PKEY>
     <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
     <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
     <DESCRIPTION>&lt;p&gt;Rule to create new wp&amp;nbsp;Permit Workplan on new&amp;nbsp;Permits trackor&lt;/p&gt;
 </DESCRIPTION>
     <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <NAME>New Permits</NAME>
     <APP_LABEL/>
    </T_BPD_ITEM>
   </BPD_ITEMS>
   <RULE_GEOCODING/>
   <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
   <RULE_TYPE_ID>18</RULE_TYPE_ID>
   <RULE_TOWER_GROUPS/>
   <COMPONENT_PACKAGES>
    <T_BPL_COMP_PKG>
     <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100006386</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
+    <OBJECT_ID>10009678565</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
     <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <BPD_ITEMS/>
     <IS_LOCKED>0</IS_LOCKED>
    </T_BPL_COMP_PKG>
@@ -474,511 +1353,9 @@ end;</SQL_TEXT>
  <RULES_ITEM>
   <IS_ASYNC>0</IS_ASYNC>
   <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_EXPIRED nightly</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100006440</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>101183</RULE_TYPE_ID>
-   <RULE_TYPE>Execute Nightly</RULE_TYPE>
-   <REPEAT_INTERVAL>FREQ=DAILY;BYHOUR=4;</REPEAT_INTERVAL>
-   <START_DATE>02/18/2020 11:32:00</START_DATE>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>야간 실행</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter la nuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutan Nightly</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>야간 자정 실행</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter tous les Soirs à Minuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter la nuit à minuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutan Noche a Medianoche</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>begin
-    for rec in (
-        select xitor_id
-          from xitor
-         where xitor_type_id = id.permits.tt
-    ) loop
-        pkg_permit_managment.calc_permit_expired_and_days_to_expiration(rec.xitor_id);    
-    end loop;  
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000615948</ITEM_ID>
-    <PKEY>100006440</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <DESCRIPTION>&lt;p&gt;Nightly rule to calculate&amp;nbsp;PRM_PERMIT_EXPIRED field value&lt;/p&gt;
-</DESCRIPTION>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_EXPIRED nightly</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>101183</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100006440</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS/>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS/>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_EXPIRES_BEFORE_CX_S cfu</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007023</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>8</RULE_TYPE_ID>
-   <RULE_TYPE>After Configured Field Update</RULE_TYPE>
-   <ID_FIELD>PK</ID_FIELD>
-   <TEMPLATE_SQL>select c.config_field_id as &quot;Config Field ID&quot;,
-c.config_field_name as &quot;Config Field Name&quot;,
-x.xitor_type as &quot;Xitor Type&quot;,
-lbl_pref.label_text || lbl_cf.label_text as &quot;Field Label&quot;,
-c.config_field_id as &quot;Config Field Id&quot;,
-dt.type_name as &quot;Data Type&quot;
-from config_field c
-join xitor_type x on x.xitor_type_id = c.xitor_type_id
-join config_field_data_type dt on dt.config_field_data_type_id = c.data_type
-left join vw_label lbl_cf on c.app_label_id = lbl_cf.label_id and lbl_cf.app_lang_id = :p_lang_id
-left join vw_label lbl_pref on x.prefix_label_id = lbl_pref.label_id and lbl_pref.app_lang_id = :p_lang_id
-where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XITOR_CLASS_ID&apos;)</TEMPLATE_SQL>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Champ mis à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Campo Actualizado (Después)</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Les règles de ce type sera exécuté à minuit.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque la valeur d&apos;un champ est modifiée.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se cambia el valor de un Campo.</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>declare
-    v_fa_date date;
-    v_fp_date date;
-    v_project_id number;
-begin
-    v_project_id := util.getparentbyid(:pk, id.project.tt);
-    select finish_projected_date,
-           finish_actual_date
-      into v_fp_date,
-           v_fa_date
-      from wp_tasks
-     where xitor_id = v_project_id 
-       and order_number = 7000 
-       and rownum = 1;
-    pkg_permit_managment.calc_permit_expires_before_cx_s(:pk, v_fa_date, v_fp_date);
-exception when no_data_found then
-    util.setvalnumbyid(:pk, id.permits.cf.prm_permit_expires_before_cx_s, 0);
-    return;
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000616531</ITEM_ID>
-    <PKEY>100007023</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <DESCRIPTION>&lt;p&gt;Rule to calculate field PRM_PERMIT_EXPIRES_BEFORE_CX_S value on fields update.&lt;/p&gt;
-</DESCRIPTION>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_EXPIRES_BEFORE_CX_S cfu</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>8</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007023</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS>
-   <T_TYPE_SPECIF_OBJ_IDNUM>
-    <XITOR_TYPE>Permits</XITOR_TYPE>
-    <OBJECT_NAME>PRM_EXPIRATION_DATE</OBJECT_NAME>
-   </T_TYPE_SPECIF_OBJ_IDNUM>
-  </CONFIG_FIELD_IDNUMS>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS/>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_EXPIRES_BEFORE_CX_S wtu</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007024</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>1</RULE_TYPE_ID>
-   <RULE_TYPE>After Task Update</RULE_TYPE>
-   <ID_FIELD>WP_TASK_ID</ID_FIELD>
-   <TEMPLATE_SQL>select t.wp_task_id as &quot;Task ID&quot;,
-       t.task_name as &quot;Task Name&quot;,
-       t.order_number &quot;Order Number&quot;,
-       w.name &quot;Workplan Name&quot;,
-       t.wp_task_id as &quot;Task Id&quot;
-from wp_tasks t,
-     wp_workplan w
-where t.wp_workplan_id = w.wp_workplan_id
-      and w.workplan_type = 0</TEMPLATE_SQL>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>업데이트 된 작업(후)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>HTTP Appel</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Tâche mise à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Tarea Actualizada (Después)</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>작업의 값이 업데이트 될 때 실행됩니다.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Horaire</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque toute valeur sur une tâche est mise à jour.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se actualiza cualquier valor en una Tarea.</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>declare
-    v_fa_date date;
-    v_fp_date date;
-    v_project_id number;
-begin
-    select finish_projected_date,
-           finish_actual_date,
-           xitor_id
-      into v_fp_date,
-           v_fa_date,
-           v_project_id
-      from wp_tasks
-     where wp_task_id = :wp_task_id;
-    for rec in (
-        select child_id
-          from relation
-         where relation_type_id = id.project.rel.permits
-           and parent_id = v_project_id
-    ) loop
-        pkg_permit_managment.calc_permit_expires_before_cx_s(rec.child_id, v_fa_date, v_fp_date);
-    end loop;
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000616532</ITEM_ID>
-    <PKEY>100007024</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <DESCRIPTION>&lt;p&gt;Rule to calculate field PRM_PERMIT_EXPIRES_BEFORE_CX_S value on task update.&lt;/p&gt;
-</DESCRIPTION>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_EXPIRES_BEFORE_CX_S wtu</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>1</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007024</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS/>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS>
-   <T_TASK_DATE_IDNUM>
-    <XITOR_TYPE>Project</XITOR_TYPE>
-    <WP_TEMPLATE>Project Workplan</WP_TEMPLATE>
-    <TASK_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>0</APP_LANG_ID>
-      <LABEL_TEXT>Construction Start</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>1</APP_LANG_ID>
-      <LABEL_TEXT>Construction Start</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>5</APP_LANG_ID>
-      <LABEL_TEXT>Construction Start</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>10</APP_LANG_ID>
-      <LABEL_TEXT>건축 시작</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>15</APP_LANG_ID>
-      <LABEL_TEXT>Début de la construction </LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>20</APP_LANG_ID>
-      <LABEL_TEXT>Début de construction</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>25</APP_LANG_ID>
-      <LABEL_TEXT>Inicio de Construcción</LABEL_TEXT>
-     </T_LABEL>
-    </TASK_LABEL>
-   </T_TASK_DATE_IDNUM>
-  </TASK_IDNUMS>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
   <RULE>PRM_PERMIT_AGE cfu</RULE>
   <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007970</RULE_ID>
+  <RULE_ID>10009678566</RULE_ID>
   <RULE_TYPE>
    <RULE_TYPE_ID>8</RULE_TYPE_ID>
    <RULE_TYPE>After Configured Field Update</RULE_TYPE>
@@ -1016,21 +1393,6 @@ where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XIT
      <APP_LABEL_ID>6417</APP_LABEL_ID>
      <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
     </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Champ mis à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Campo Actualizado (Después)</LABEL_TEXT>
-    </T_LABEL>
    </TYPE_LABELS>
    <DESC_LABELS>
     <T_LABEL>
@@ -1053,25 +1415,10 @@ where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XIT
      <APP_LABEL_ID>6446</APP_LABEL_ID>
      <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
     </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Les règles de ce type sera exécuté à minuit.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque la valeur d&apos;un champ est modifiée.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se cambia el valor de un Campo.</LABEL_TEXT>
-    </T_LABEL>
    </DESC_LABELS>
   </RULE_TYPE>
   <SQL_TEXT>begin
-    pkg_permit_managment.calc_permit_age(:pk);
+    permgmt_permit_managment.calc_permit_age(:pk);
 end;</SQL_TEXT>
   <WARNING_LABEL/>
   <RULE_CLASS_PARAM_VALS/>
@@ -1079,785 +1426,28 @@ end;</SQL_TEXT>
   <RULE_HTTPCALL_PARAMS/>
   <BPD_ITEMS>
    <T_BPD_ITEM>
-    <ITEM_ID>10000617577</ITEM_ID>
-    <PKEY>100007970</PKEY>
+    <ITEM_ID>1000913891811</ITEM_ID>
+    <PKEY>10009678566</PKEY>
     <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
     <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
     <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <NAME>PRM_PERMIT_AGE cfu</NAME>
     <APP_LABEL/>
    </T_BPD_ITEM>
   </BPD_ITEMS>
   <RULE_GEOCODING/>
   <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
   <RULE_TYPE_ID>8</RULE_TYPE_ID>
   <RULE_TOWER_GROUPS/>
   <COMPONENT_PACKAGES>
    <T_BPL_COMP_PKG>
     <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007970</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
+    <OBJECT_ID>10009678566</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
     <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS>
-   <T_TYPE_SPECIF_OBJ_IDNUM>
-    <XITOR_TYPE>Permits</XITOR_TYPE>
-    <OBJECT_NAME>PRM_PERMIT_STATUS</OBJECT_NAME>
-   </T_TYPE_SPECIF_OBJ_IDNUM>
-  </CONFIG_FIELD_IDNUMS>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS/>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_AGE nightly</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007971</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>101183</RULE_TYPE_ID>
-   <RULE_TYPE>Execute Nightly</RULE_TYPE>
-   <REPEAT_INTERVAL>FREQ=DAILY;BYHOUR=4;</REPEAT_INTERVAL>
-   <START_DATE>02/18/2020 11:32:00</START_DATE>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>야간 실행</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter la nuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutan Nightly</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>야간 자정 실행</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter tous les Soirs à Minuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter la nuit à minuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutan Noche a Medianoche</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>begin
-    for rec in (
-        select xitor_id
-          from xitor
-         where xitor_type_id = id.permits.tt
-    ) loop
-        pkg_permit_managment.calc_permit_age(rec.xitor_id);
-    end loop;
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000617578</ITEM_ID>
-    <PKEY>100007971</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_AGE nightly</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>101183</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007971</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS/>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS/>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_COUNTDOWN wtu</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007972</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>1</RULE_TYPE_ID>
-   <RULE_TYPE>After Task Update</RULE_TYPE>
-   <ID_FIELD>WP_TASK_ID</ID_FIELD>
-   <TEMPLATE_SQL>select t.wp_task_id as &quot;Task ID&quot;,
-       t.task_name as &quot;Task Name&quot;,
-       t.order_number &quot;Order Number&quot;,
-       w.name &quot;Workplan Name&quot;,
-       t.wp_task_id as &quot;Task Id&quot;
-from wp_tasks t,
-     wp_workplan w
-where t.wp_workplan_id = w.wp_workplan_id
-      and w.workplan_type = 0</TEMPLATE_SQL>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Task Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>업데이트 된 작업(후)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>HTTP Appel</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Tâche mise à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6413</APP_LABEL_ID>
-     <LABEL_TEXT>Tarea Actualizada (Después)</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when any value on a Task is updated.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>작업의 값이 업데이트 될 때 실행됩니다.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Horaire</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque toute valeur sur une tâche est mise à jour.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6442</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se actualiza cualquier valor en una Tarea.</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>declare
-    v_xitor_id number;
-begin
-    select xitor_id
-      into v_xitor_id
-      from wp_tasks
-     where wp_task_id = :wp_task_id;
-    pkg_permit_managment.calc_permit_countdown_and_expected(v_xitor_id);
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000617579</ITEM_ID>
-    <PKEY>100007972</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_COUNTDOWN wtu</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>1</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007972</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS/>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS>
-   <T_TASK_DATE_IDNUM>
-    <XITOR_TYPE>Permits</XITOR_TYPE>
-    <WP_TEMPLATE>Permit Workplan</WP_TEMPLATE>
-    <TASK_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>0</APP_LANG_ID>
-      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>1</APP_LANG_ID>
-      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>5</APP_LANG_ID>
-      <LABEL_TEXT>Permit Approved</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>10</APP_LANG_ID>
-      <LABEL_TEXT>승인 승인</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>15</APP_LANG_ID>
-      <LABEL_TEXT>Permis approuvé </LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>20</APP_LANG_ID>
-      <LABEL_TEXT>Permis approuvé</LABEL_TEXT>
-     </T_LABEL>
-     <T_LABEL>
-      <APP_LANG_ID>25</APP_LANG_ID>
-      <LABEL_TEXT>Aprobado Permiso</LABEL_TEXT>
-     </T_LABEL>
-    </TASK_LABEL>
-   </T_TASK_DATE_IDNUM>
-  </TASK_IDNUMS>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_COUNTDOWN nightly</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007973</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>101183</RULE_TYPE_ID>
-   <RULE_TYPE>Execute Nightly</RULE_TYPE>
-   <REPEAT_INTERVAL>FREQ=DAILY;BYHOUR=4;</REPEAT_INTERVAL>
-   <START_DATE>02/18/2020 11:32:00</START_DATE>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>야간 실행</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter la nuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>-31238</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutan Nightly</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Execute Nightly at Midnight</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>야간 자정 실행</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter tous les Soirs à Minuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter la nuit à minuit</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>-31239</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutan Noche a Medianoche</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>begin
-    for rec in (
-        select xitor_id
-          from xitor
-         where xitor_type_id = id.permits.tt
-    ) loop
-        pkg_permit_managment.calc_permit_countdown_and_expected(rec.xitor_id);
-    end loop;
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000617580</ITEM_ID>
-    <PKEY>100007973</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_COUNTDOWN nightly</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>101183</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007973</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS/>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS/>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_EXPECTED</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007974</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>8</RULE_TYPE_ID>
-   <RULE_TYPE>After Configured Field Update</RULE_TYPE>
-   <ID_FIELD>PK</ID_FIELD>
-   <TEMPLATE_SQL>select c.config_field_id as &quot;Config Field ID&quot;,
-c.config_field_name as &quot;Config Field Name&quot;,
-x.xitor_type as &quot;Xitor Type&quot;,
-lbl_pref.label_text || lbl_cf.label_text as &quot;Field Label&quot;,
-c.config_field_id as &quot;Config Field Id&quot;,
-dt.type_name as &quot;Data Type&quot;
-from config_field c
-join xitor_type x on x.xitor_type_id = c.xitor_type_id
-join config_field_data_type dt on dt.config_field_data_type_id = c.data_type
-left join vw_label lbl_cf on c.app_label_id = lbl_cf.label_id and lbl_cf.app_lang_id = :p_lang_id
-left join vw_label lbl_pref on x.prefix_label_id = lbl_pref.label_id and lbl_pref.app_lang_id = :p_lang_id
-where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XITOR_CLASS_ID&apos;)</TEMPLATE_SQL>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Champ mis à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Campo Actualizado (Después)</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Les règles de ce type sera exécuté à minuit.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque la valeur d&apos;un champ est modifiée.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se cambia el valor de un Campo.</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>begin
-    pkg_permit_managment.calc_permit_expected(:pk);
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000617581</ITEM_ID>
-    <PKEY>100007974</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_EXPECTED</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>8</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007974</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <BPD_ITEMS/>
-    <IS_LOCKED>0</IS_LOCKED>
-   </T_BPL_COMP_PKG>
-  </COMPONENT_PACKAGES>
-  <CONFIG_FIELD_IDNUMS>
-   <T_TYPE_SPECIF_OBJ_IDNUM>
-    <XITOR_TYPE>Permits</XITOR_TYPE>
-    <OBJECT_NAME>PRM_PERMIT_STATUS</OBJECT_NAME>
-   </T_TYPE_SPECIF_OBJ_IDNUM>
-   <T_TYPE_SPECIF_OBJ_IDNUM>
-    <XITOR_TYPE>Permits</XITOR_TYPE>
-    <OBJECT_NAME>PRM_PERMIT_COUNTDOWN</OBJECT_NAME>
-   </T_TYPE_SPECIF_OBJ_IDNUM>
-  </CONFIG_FIELD_IDNUMS>
-  <TASK_DATE_IDNUMS/>
-  <TASK_IDNUMS/>
-  <TRACKOR_TYPE_IDNUMS/>
-  <RELATION_TYPE_IDNUMS/>
-  <WP_TEMPLATE_IDNUMS/>
-  <WF_TEMPLATE_IDNUMS/>
-  <IMPORT_IDNUMS/>
-  <REPORT_IDNUMS/>
-  <COMPONENT_LABELS/>
- </RULES_ITEM>
- <RULES_ITEM>
-  <IS_ASYNC>0</IS_ASYNC>
-  <IS_ENABLED>1</IS_ENABLED>
-  <RULE>PRM_PERMIT_COUNTDOWN cfu</RULE>
-  <RULE_CLASS_ID>1</RULE_CLASS_ID>
-  <RULE_ID>100007985</RULE_ID>
-  <RULE_TYPE>
-   <RULE_TYPE_ID>8</RULE_TYPE_ID>
-   <RULE_TYPE>After Configured Field Update</RULE_TYPE>
-   <ID_FIELD>PK</ID_FIELD>
-   <TEMPLATE_SQL>select c.config_field_id as &quot;Config Field ID&quot;,
-c.config_field_name as &quot;Config Field Name&quot;,
-x.xitor_type as &quot;Xitor Type&quot;,
-lbl_pref.label_text || lbl_cf.label_text as &quot;Field Label&quot;,
-c.config_field_id as &quot;Config Field Id&quot;,
-dt.type_name as &quot;Data Type&quot;
-from config_field c
-join xitor_type x on x.xitor_type_id = c.xitor_type_id
-join config_field_data_type dt on dt.config_field_data_type_id = c.data_type
-left join vw_label lbl_cf on c.app_label_id = lbl_cf.label_id and lbl_cf.app_lang_id = :p_lang_id
-left join vw_label lbl_pref on x.prefix_label_id = lbl_pref.label_id and lbl_pref.app_lang_id = :p_lang_id
-where c.is_static = 0 or c.config_field_name in (&apos;XITOR_KEY&apos;,&apos;XITOR_CLASS_ID&apos;)</TEMPLATE_SQL>
-   <TYPE_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Field Updated (After)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuter Tous Les Soirs</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Champ mis à jour (après)</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6417</APP_LABEL_ID>
-     <LABEL_TEXT>Campo Actualizado (Después)</LABEL_TEXT>
-    </T_LABEL>
-   </TYPE_LABELS>
-   <DESC_LABELS>
-    <T_LABEL>
-     <APP_LANG_ID>0</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>1</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>5</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>10</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Executed when a Field&apos;s value is changed.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>15</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Les règles de ce type sera exécuté à minuit.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>20</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Exécuté lorsque la valeur d&apos;un champ est modifiée.</LABEL_TEXT>
-    </T_LABEL>
-    <T_LABEL>
-     <APP_LANG_ID>25</APP_LANG_ID>
-     <APP_LABEL_ID>6446</APP_LABEL_ID>
-     <LABEL_TEXT>Ejecutado cuando se cambia el valor de un Campo.</LABEL_TEXT>
-    </T_LABEL>
-   </DESC_LABELS>
-  </RULE_TYPE>
-  <SQL_TEXT>begin
-    pkg_permit_managment.calc_permit_countdown_and_expected(:pk);
-end;</SQL_TEXT>
-  <WARNING_LABEL/>
-  <RULE_CLASS_PARAM_VALS/>
-  <RULE_HTTPCALLS/>
-  <RULE_HTTPCALL_PARAMS/>
-  <BPD_ITEMS>
-   <T_BPD_ITEM>
-    <ITEM_ID>10000617592</ITEM_ID>
-    <PKEY>100007985</PKEY>
-    <ITEM_TYPE_ID>9</ITEM_TYPE_ID>
-    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
-    <BLOB_DATA/>
-    <PROGRAM_ID>1</PROGRAM_ID>
-    <NAME>PRM_PERMIT_COUNTDOWN cfu</NAME>
-    <APP_LABEL/>
-   </T_BPD_ITEM>
-  </BPD_ITEMS>
-  <RULE_GEOCODING/>
-  <RULE_MAP_SNIPPETS/>
-  <PROGRAM_ID>1</PROGRAM_ID>
-  <RULE_TYPE_ID>8</RULE_TYPE_ID>
-  <RULE_TOWER_GROUPS/>
-  <COMPONENT_PACKAGES>
-   <T_BPL_COMP_PKG>
-    <COMPONENT_ID>4</COMPONENT_ID>
-    <OBJECT_ID>100007985</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>101283</COMPONENTS_PACKAGE_ID>
-    <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <BPD_ITEMS/>
     <IS_LOCKED>0</IS_LOCKED>
    </T_BPL_COMP_PKG>

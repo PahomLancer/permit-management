@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="clear program case 166677 8_admin" description="" name="test.onevizion.com_BPL_02132023070538.xml" site="http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080" ts="" ><DB_PACKAGES>
+<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="clear program case 166677 13_admin" description="" name="test.onevizion.com_BPL_02212023145932.xml" site="http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080" ts="" ><DB_PACKAGES>
  <DB_PACKAGES_ITEM>
-  <DB_PKG_NAME>PKG_PERMIT_MANAGMENT</DB_PKG_NAME>
-  <PKG_NAME>PKG_PERMIT_MANAGMENT</PKG_NAME>
-  <DB_PACKAGE_SPEC>CREATE OR REPLACE EDITIONABLE PACKAGE &quot;PKG_PERMIT_MANAGMENT&quot; 
+  <DB_PKG_NAME>PERMGMT_PERMIT_MANAGMENT</DB_PKG_NAME>
+  <PKG_NAME>PERMGMT_PERMIT_MANAGMENT</PKG_NAME>
+  <DB_PACKAGE_SPEC>CREATE OR REPLACE EDITIONABLE PACKAGE &quot;PERMGMT_PERMIT_MANAGMENT&quot; 
 as
     c_wp_template_name constant varchar2 (4000) := &apos;Permit Workplan&apos;;
 
@@ -41,8 +41,8 @@ as
     workplan
     Permit Workplan
      */
-end;</DB_PACKAGE_SPEC>
-  <DB_PACKAGE_BODY>CREATE OR REPLACE EDITIONABLE PACKAGE BODY &quot;PKG_PERMIT_MANAGMENT&quot; 
+end permgmt_permit_managment;</DB_PACKAGE_SPEC>
+  <DB_PACKAGE_BODY>CREATE OR REPLACE EDITIONABLE PACKAGE BODY &quot;PERMGMT_PERMIT_MANAGMENT&quot; 
 as
     
     procedure calc_permit_countdown_and_expected(p_permit_id in number)
@@ -69,7 +69,7 @@ as
         
         v_300_af := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 300, &apos;A&apos;, &apos;F&apos;);
 
-        if util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.v_prm_permit_status.cancelled, id.vt.v_prm_permit_status.rejected)
+        if util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected)
         or v_300_af is null 
         then
             util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown, null);
@@ -112,7 +112,7 @@ as
         v_300_af := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 300, &apos;A&apos;, &apos;F&apos;);
         v_permit_countdown := util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown);
 
-        if util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.v_prm_permit_status.cancelled, id.vt.v_prm_permit_status.rejected)
+        if util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected)
         or v_500_af is not null
         or v_300_af is null
         or v_permit_countdown is null
@@ -122,17 +122,17 @@ as
         end if;
         
         case when v_permit_countdown &lt; 0 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.v_prm_permits_due.past_due, 1);
+                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.past_due, 1);
              when v_permit_countdown &lt;= 7 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.v_prm_permits_due.seven_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.seven_days, 1);
              when v_permit_countdown &lt;= 30 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.v_prm_permits_due.thirty_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.thirty_days, 1);
              when v_permit_countdown &lt;= 60 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.v_prm_permits_due.sixty_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.sixty_days, 1);
              when v_permit_countdown &lt;= 90 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.v_prm_permits_due.ninety_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.ninety_days, 1);
              else
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.v_prm_permits_due.over_ninety_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.over_ninety_days, 1);
         end case;
     end calc_permit_expected;
     
@@ -161,7 +161,7 @@ as
 
         if v_300_af is null 
         or v_500_af is not null
-        or util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.v_prm_permit_status.cancelled, id.vt.v_prm_permit_status.rejected) 
+        or util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected) 
         then
             util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_age, 0);
         else
@@ -283,20 +283,20 @@ as
         loop
             util.settaskdate(rec.wp_task_id, &apos;A&apos;, &apos;F&apos;, current_date, 1);
         end loop;
-        util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status, id.vt.v_prm_permit_status.in_progress, 1);
+        util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status, id.vt.permgmt_prm_permit_status.in_progress, 1);
     end new_permit;
 
-end pkg_permit_managment;</DB_PACKAGE_BODY>
-  <DB_PACKAGE_ID>10065498</DB_PACKAGE_ID>
-  <PROGRAM_ID>1000980102</PROGRAM_ID>
+end permgmt_permit_managment;</DB_PACKAGE_BODY>
+  <DB_PACKAGE_ID>10065601</DB_PACKAGE_ID>
+  <PROGRAM_ID>1000980202</PROGRAM_ID>
   <BPD_ITEMS/>
   <COMPONENT_PACKAGES>
    <T_BPL_COMP_PKG>
     <COMPONENT_ID>27</COMPONENT_ID>
-    <OBJECT_ID>10065498</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>191535</COMPONENTS_PACKAGE_ID>
+    <OBJECT_ID>10065601</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
     <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1000980102</PROGRAM_ID>
+    <PROGRAM_ID>1000980202</PROGRAM_ID>
     <BPD_ITEMS/>
     <IS_LOCKED>0</IS_LOCKED>
    </T_BPL_COMP_PKG>
