@@ -22,7 +22,7 @@ begin
         update rule set is_enabled = 1 where rule_id = rec.rule_id;
         commit;
     end loop;
-    dbms_output.put_line('Rules Enabled');
+    dbms_output.put_line('Rules Enabled' || pkg_str.c_lb);
 
     update autom
        set enabled = 1
