@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="clear program case 166677 15_admin" description="" name="test.onevizion.com_BPL_02272023200731.xml" site="http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080" ts="" ><TRACKOR_TOURS>
+ <TRACKOR_TOURS_ITEM>
+  <TOUR_ID>1001008801</TOUR_ID>
+  <TOUR_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>0</APP_LANG_ID>
+    <APP_LABEL_ID>-5552332</APP_LABEL_ID>
+    <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+   </T_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>1</APP_LANG_ID>
+    <APP_LABEL_ID>-5552332</APP_LABEL_ID>
+    <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+   </T_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>5</APP_LANG_ID>
+    <APP_LABEL_ID>-5552332</APP_LABEL_ID>
+    <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+   </T_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>10</APP_LANG_ID>
+    <APP_LABEL_ID>-5552332</APP_LABEL_ID>
+    <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+   </T_LABEL>
+   <T_LABEL>
+    <APP_LANG_ID>20</APP_LANG_ID>
+    <APP_LABEL_ID>-5552332</APP_LABEL_ID>
+    <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+   </T_LABEL>
+  </TOUR_LABEL>
+  <DESCRIPTION>Permit Tracker Tab Overview</DESCRIPTION>
+  <PROGRAM_DESC>clear program case 166677 15</PROGRAM_DESC>
+  <XITOR_TYPE>Permits</XITOR_TYPE>
+  <CONFIG_GROUP_NAME>
+   <CONFIG_GROUP_ID>1001278314</CONFIG_GROUP_ID>
+   <DESCRIPTION>Permits_GENERAL_INFO</DESCRIPTION>
+   <TRACKOR_TYPE>Permits</TRACKOR_TYPE>
+  </CONFIG_GROUP_NAME>
+  <TOUR_STEPS>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073447</TOUR_STEP_ID>
+    <ORDER_NUMBER>20</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552334</APP_LABEL_ID>
+      <LABEL_TEXT>Select Jurisdiction</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552334</APP_LABEL_ID>
+      <LABEL_TEXT>Select Jurisdiction</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552334</APP_LABEL_ID>
+      <LABEL_TEXT>Select Jurisdiction</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552334</APP_LABEL_ID>
+      <LABEL_TEXT>Select Jurisdiction</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552334</APP_LABEL_ID>
+      <LABEL_TEXT>Select Jurisdiction</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552333</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Welcome to the Permit Tracker.&lt;/p&gt;
+
+&lt;p&gt;Start by selecting the Jurisdiction with the authority to approve the permit.&lt;/p&gt;
+
+&lt;p&gt;If this is the first permit in an area, Add a new Jurisdiction record.&lt;/p&gt;
+
+&lt;p&gt;Click the pencil icon to view Jurisdiction details.&lt;/p&gt;
+
+&lt;p&gt;After selecting the Jurisdiction, Click APPLY to create the Permit record.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552333</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;https://dev-apps.onevizion.com/admin/bpdocitems/GetBpdBlob.do?id=10013906&quot; style=&quot;border-style:solid; border-width:2px; height:221px; margin-left:10px; margin-right:10px; width:225px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome to the Permit Tracker.&lt;/p&gt;
+
+&lt;p&gt;Start by selecting the Jurisdiction with the authority to approve the permit.&lt;/p&gt;
+
+&lt;p&gt;If this is the first permit in an area, Add a new Jurisdiction record.&lt;/p&gt;
+
+&lt;p&gt;Click the pencil icon to view Jurisdiction details.&lt;/p&gt;
+
+&lt;p&gt;After selecting the Jurisdiction, Click APPLY to create the Permit record.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;https://dev-apps.onevizion.com/admin/bpdocitems/Form.do?id=-1&amp;amp;PKey=1000064894&amp;amp;ItemTypeID=3&amp;amp;FormNumber=CF131001&quot; /&gt;&lt;img alt=&quot;&quot; src=&quot;https://dev-apps.onevizion.com/admin/bpdocitems/Form.do?id=-1&amp;amp;PKey=1000064894&amp;amp;ItemTypeID=3&amp;amp;FormNumber=CF131001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552333</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Welcome to the Permit Tracker.&lt;/p&gt;
+
+&lt;p&gt;Start by selecting the Jurisdiction with the authority to approve the permit.&lt;/p&gt;
+
+&lt;p&gt;If this is the first permit in an area, Add a new Jurisdiction record.&lt;/p&gt;
+
+&lt;p&gt;Click the pencil icon to view Jurisdiction details.&lt;/p&gt;
+
+&lt;p&gt;After selecting the Jurisdiction, Click APPLY to create the Permit record.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552333</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Welcome to the Permit Tracker.&lt;/p&gt;
+
+&lt;p&gt;Start by selecting the Jurisdiction with the authority to approve the permit.&lt;/p&gt;
+
+&lt;p&gt;If this is the first permit in an area, Add a new Jurisdiction record.&lt;/p&gt;
+
+&lt;p&gt;Click the pencil icon to view Jurisdiction details.&lt;/p&gt;
+
+&lt;p&gt;After selecting the Jurisdiction, Click APPLY to create the Permit record.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552333</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Welcome to the Permit Tracker.&lt;/p&gt;
+
+&lt;p&gt;Start by selecting the Jurisdiction with the authority to approve the permit.&lt;/p&gt;
+
+&lt;p&gt;If this is the first permit in an area, Add a new Jurisdiction record.&lt;/p&gt;
+
+&lt;p&gt;Click the pencil icon to view Jurisdiction details.&lt;/p&gt;
+
+&lt;p&gt;After selecting the Jurisdiction, Click APPLY to create the Permit record.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx9_disp</ELEMENT_ID>
+    <PLACEMENT>bottom</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000062655_1_disp</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073448</TOUR_STEP_ID>
+    <ORDER_NUMBER>40</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552336</APP_LABEL_ID>
+      <LABEL_TEXT>Select Permit Type</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552336</APP_LABEL_ID>
+      <LABEL_TEXT>Select Permit Type</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552336</APP_LABEL_ID>
+      <LABEL_TEXT>Select Permit Type</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552336</APP_LABEL_ID>
+      <LABEL_TEXT>Select Permit Type</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552336</APP_LABEL_ID>
+      <LABEL_TEXT>Select Permit Type</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552335</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Next, Select the Permit Type.&lt;/p&gt;
+
+&lt;p&gt;The permit type list may be changed by editing the field properties.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552335</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Next, Select the Permit Type.&lt;/p&gt;
+
+&lt;p&gt;The permit type list may be changed by editing the field properties.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552335</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Next, Select the Permit Type.&lt;/p&gt;
+
+&lt;p&gt;The permit type list may be changed by editing the field properties.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552335</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Next, Select the Permit Type.&lt;/p&gt;
+
+&lt;p&gt;The permit type list may be changed by editing the field properties.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552335</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Next, Select the Permit Type.&lt;/p&gt;
+
+&lt;p&gt;The permit type list may be changed by editing the field properties.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx18</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000063853_1</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073449</TOUR_STEP_ID>
+    <ORDER_NUMBER>60</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552338</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Status</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552338</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Status</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552338</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Status</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552338</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Status</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552338</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Status</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552337</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Status is updated by OneVizion Automation:&lt;/p&gt;
+
+&lt;p&gt;Approved - the permit approved finish date is entered&lt;/p&gt;
+
+&lt;p&gt;Expired - the permit expirtion date is in the past and construction has not started*&lt;/p&gt;
+
+&lt;p&gt;Cancelled - the permit cancelled checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Rejected - the permit rejected checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Expires&amp;nbsp;before Cx Start - the expiration date occurs before the construction start date*&lt;/p&gt;
+
+&lt;p&gt;Submitted - Application Submitted date has been entered and has not been approved or rejected&lt;/p&gt;
+
+&lt;p&gt;In Progress - the permit has not been submitted; enter the Application Submitted date.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;*requires Permit to be a child to the Project Tracker and links to the project workplan.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552337</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Status is updated by OneVizion Automation:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Approved &lt;/strong&gt;- the permit approved finish date is entered&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Expired &lt;/strong&gt;- the permit expirtion date is in the past and construction has not started*&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cancelled &lt;/strong&gt;- the permit cancelled checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rejected &lt;/strong&gt;- the permit rejected checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Expires&amp;nbsp;before Cx Start&lt;/strong&gt; - the expiration date occurs before the construction start date*&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Submitted &lt;/strong&gt;- Application Submitted date has been entered and has not been approved or rejected&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In Progress&lt;/strong&gt; - the permit has not been submitted; enter the Application Submitted date.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*requires Permit to be a child to the Project Tracker and links to the project workplan.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/em&gt;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552337</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Status is updated by OneVizion Automation:&lt;/p&gt;
+
+&lt;p&gt;Approved - the permit approved finish date is entered&lt;/p&gt;
+
+&lt;p&gt;Expired - the permit expirtion date is in the past and construction has not started*&lt;/p&gt;
+
+&lt;p&gt;Cancelled - the permit cancelled checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Rejected - the permit rejected checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Expires&amp;nbsp;before Cx Start - the expiration date occurs before the construction start date*&lt;/p&gt;
+
+&lt;p&gt;Submitted - Application Submitted date has been entered and has not been approved or rejected&lt;/p&gt;
+
+&lt;p&gt;In Progress - the permit has not been submitted; enter the Application Submitted date.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;*requires Permit to be a child to the Project Tracker and links to the project workplan.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552337</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Status is updated by OneVizion Automation:&lt;/p&gt;
+
+&lt;p&gt;Approved - the permit approved finish date is entered&lt;/p&gt;
+
+&lt;p&gt;Expired - the permit expirtion date is in the past and construction has not started*&lt;/p&gt;
+
+&lt;p&gt;Cancelled - the permit cancelled checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Rejected - the permit rejected checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Expires&amp;nbsp;before Cx Start - the expiration date occurs before the construction start date*&lt;/p&gt;
+
+&lt;p&gt;Submitted - Application Submitted date has been entered and has not been approved or rejected&lt;/p&gt;
+
+&lt;p&gt;In Progress - the permit has not been submitted; enter the Application Submitted date.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;*requires Permit to be a child to the Project Tracker and links to the project workplan.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552337</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Status is updated by OneVizion Automation:&lt;/p&gt;
+
+&lt;p&gt;Approved - the permit approved finish date is entered&lt;/p&gt;
+
+&lt;p&gt;Expired - the permit expirtion date is in the past and construction has not started*&lt;/p&gt;
+
+&lt;p&gt;Cancelled - the permit cancelled checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Rejected - the permit rejected checkbox is checked&lt;/p&gt;
+
+&lt;p&gt;Expires&amp;nbsp;before Cx Start - the expiration date occurs before the construction start date*&lt;/p&gt;
+
+&lt;p&gt;Submitted - Application Submitted date has been entered and has not been approved or rejected&lt;/p&gt;
+
+&lt;p&gt;In Progress - the permit has not been submitted; enter the Application Submitted date.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;*requires Permit to be a child to the Project Tracker and links to the project workplan.&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx20</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000063862_1</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073450</TOUR_STEP_ID>
+    <ORDER_NUMBER>80</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552340</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Comments</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552340</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Comments</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552340</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Comments</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552340</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Comments</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552340</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Comments</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552339</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Comments field is&amp;nbsp;used to communicate recent accomplishments and next steps.&lt;/p&gt;
+
+&lt;p&gt;Approval Process is used to describe the steps, documents, and meetings necessary to obtain the permit.&lt;/p&gt;
+
+&lt;p&gt;Additional fields are used to help categorize, filter, and report.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552339</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Comments field is&amp;nbsp;used to communicate recent accomplishments and next steps.&lt;/p&gt;
+
+&lt;p&gt;Approval Process is used to describe the steps, documents, and meetings necessary to obtain the permit.&lt;/p&gt;
+
+&lt;p&gt;Additional fields are used to help categorize, filter, and report.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552339</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Comments field is&amp;nbsp;used to communicate recent accomplishments and next steps.&lt;/p&gt;
+
+&lt;p&gt;Approval Process is used to describe the steps, documents, and meetings necessary to obtain the permit.&lt;/p&gt;
+
+&lt;p&gt;Additional fields are used to help categorize, filter, and report.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552339</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Comments field is&amp;nbsp;used to communicate recent accomplishments and next steps.&lt;/p&gt;
+
+&lt;p&gt;Approval Process is used to describe the steps, documents, and meetings necessary to obtain the permit.&lt;/p&gt;
+
+&lt;p&gt;Additional fields are used to help categorize, filter, and report.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552339</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Comments field is&amp;nbsp;used to communicate recent accomplishments and next steps.&lt;/p&gt;
+
+&lt;p&gt;Approval Process is used to describe the steps, documents, and meetings necessary to obtain the permit.&lt;/p&gt;
+
+&lt;p&gt;Additional fields are used to help categorize, filter, and report.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx23</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000063875_1</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073451</TOUR_STEP_ID>
+    <ORDER_NUMBER>100</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552342</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Documents</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552342</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Documents</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552342</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Documents</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552342</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Documents</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552342</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Documents</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552341</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Upload the permit application and approved permit.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552341</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Upload the permit application and approved permit.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552341</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Upload the permit application and approved permit.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552341</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Upload the permit application and approved permit.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552341</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Upload the permit application and approved permit.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx34_disp</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000063799_1_disp</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073452</TOUR_STEP_ID>
+    <ORDER_NUMBER>120</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552344</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Expiration</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552344</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Expiration</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552344</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Expiration</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552344</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Expiration</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552344</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Expiration</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552343</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Once approved, enter the permit expiration date.&lt;/p&gt;
+
+&lt;p&gt;OneVizion will count the days to expiration and notify when expired.&lt;/p&gt;
+
+&lt;p&gt;When the project is connected to a project workplan, OneVizion will indicate when a permit is set to expire before a future construction start date.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552343</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Once approved, enter the permit expiration date.&lt;/p&gt;
+
+&lt;p&gt;OneVizion will count the days to expiration and notify when expired.&lt;/p&gt;
+
+&lt;p&gt;When the project is connected to a project workplan, OneVizion will indicate when a permit is set to expire before a future construction start date.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552343</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Once approved, enter the permit expiration date.&lt;/p&gt;
+
+&lt;p&gt;OneVizion will count the days to expiration and notify when expired.&lt;/p&gt;
+
+&lt;p&gt;When the project is connected to a project workplan, OneVizion will indicate when a permit is set to expire before a future construction start date.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552343</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Once approved, enter the permit expiration date.&lt;/p&gt;
+
+&lt;p&gt;OneVizion will count the days to expiration and notify when expired.&lt;/p&gt;
+
+&lt;p&gt;When the project is connected to a project workplan, OneVizion will indicate when a permit is set to expire before a future construction start date.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552343</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Once approved, enter the permit expiration date.&lt;/p&gt;
+
+&lt;p&gt;OneVizion will count the days to expiration and notify when expired.&lt;/p&gt;
+
+&lt;p&gt;When the project is connected to a project workplan, OneVizion will indicate when a permit is set to expire before a future construction start date.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx44</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000063823_1</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073453</TOUR_STEP_ID>
+    <ORDER_NUMBER>140</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552346</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Workplan</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552346</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Workplan</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552346</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Workplan</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552346</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Workplan</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552346</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Workplan</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552345</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Each Permit has a small project schedule.&lt;/p&gt;
+
+&lt;p&gt;Forecast and Actual dates can be entered for major permit milestones to communicate progress and when the permit is expected to be approved.&lt;/p&gt;
+
+&lt;p&gt;If the permit is rejected, check the box for Permit Rejected.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552345</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Each Permit has a small project schedule.&lt;/p&gt;
+
+&lt;p&gt;Forecast and Actual dates can be entered for major permit milestones to communicate progress and when the permit is expected to be approved.&lt;/p&gt;
+
+&lt;p&gt;If the permit is rejected, check the box for Permit Rejected.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552345</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Each Permit has a small project schedule.&lt;/p&gt;
+
+&lt;p&gt;Forecast and Actual dates can be entered for major permit milestones to communicate progress and when the permit is expected to be approved.&lt;/p&gt;
+
+&lt;p&gt;If the permit is rejected, check the box for Permit Rejected.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552345</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Each Permit has a small project schedule.&lt;/p&gt;
+
+&lt;p&gt;Forecast and Actual dates can be entered for major permit milestones to communicate progress and when the permit is expected to be approved.&lt;/p&gt;
+
+&lt;p&gt;If the permit is rejected, check the box for Permit Rejected.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552345</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Each Permit has a small project schedule.&lt;/p&gt;
+
+&lt;p&gt;Forecast and Actual dates can be entered for major permit milestones to communicate progress and when the permit is expected to be approved.&lt;/p&gt;
+
+&lt;p&gt;If the permit is rejected, check the box for Permit Rejected.&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx56_finish</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fetd3_10011201116_100128815_1_finish</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073454</TOUR_STEP_ID>
+    <ORDER_NUMBER>160</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552348</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Age</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552348</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Age</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552348</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Age</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552348</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Age</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552348</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Age</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552347</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Cycle Time - days between Application submitted and Permit approved.&lt;/p&gt;
+
+&lt;p&gt;Permit Age - number of days since Application submitted. Permit has not been approved yet.&lt;/p&gt;
+
+&lt;p&gt;Permit Countdown - number of days until the Permit Approved forecast date.&lt;/p&gt;
+
+&lt;p&gt;Permit Expected - groups permits due within 7, 30, 60, 90, or &amp;gt;90 days.&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552347</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Cycle Time - days between Application submitted and Permit approved.&lt;/p&gt;
+
+&lt;p&gt;Permit Age - number of days since Application submitted. Permit has not been approved yet.&lt;/p&gt;
+
+&lt;p&gt;Permit Countdown - number of days until the Permit Approved forecast date.&lt;/p&gt;
+
+&lt;p&gt;Permit Expected - groups permits due within 7, 30, 60, 90, or &amp;gt;90 days.&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552347</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Cycle Time - days between Application submitted and Permit approved.&lt;/p&gt;
+
+&lt;p&gt;Permit Age - number of days since Application submitted. Permit has not been approved yet.&lt;/p&gt;
+
+&lt;p&gt;Permit Countdown - number of days until the Permit Approved forecast date.&lt;/p&gt;
+
+&lt;p&gt;Permit Expected - groups permits due within 7, 30, 60, 90, or &amp;gt;90 days.&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552347</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Cycle Time - days between Application submitted and Permit approved.&lt;/p&gt;
+
+&lt;p&gt;Permit Age - number of days since Application submitted. Permit has not been approved yet.&lt;/p&gt;
+
+&lt;p&gt;Permit Countdown - number of days until the Permit Approved forecast date.&lt;/p&gt;
+
+&lt;p&gt;Permit Expected - groups permits due within 7, 30, 60, 90, or &amp;gt;90 days.&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552347</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;Permit Cycle Time - days between Application submitted and Permit approved.&lt;/p&gt;
+
+&lt;p&gt;Permit Age - number of days since Application submitted. Permit has not been approved yet.&lt;/p&gt;
+
+&lt;p&gt;Permit Countdown - number of days until the Permit Approved forecast date.&lt;/p&gt;
+
+&lt;p&gt;Permit Expected - groups permits due within 7, 30, 60, 90, or &amp;gt;90 days.&amp;nbsp;&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx74</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000067268_1</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+   <T_BPL_TOUR_STEP>
+    <TOUR_ID>1001008801</TOUR_ID>
+    <TOUR_STEP_ID>1001073455</TOUR_STEP_ID>
+    <ORDER_NUMBER>180</ORDER_NUMBER>
+    <TITLE_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552350</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Appeal</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552350</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Appeal</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552350</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Appeal</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552350</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Appeal</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552350</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Appeal</LABEL_TEXT>
+     </T_LABEL>
+    </TITLE_LABEL>
+    <CONTENT_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552349</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;If the permit is appealed, check the Permit Appealed checbox and enter&amp;nbsp;the Appeal End Date.&lt;/p&gt;
+
+&lt;p&gt;When the appeal period is over and permit is approved, clear the Permit Appealed Checkbox.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;That is the end of this Trackor Tour.&lt;/p&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552349</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;If the permit is appealed, check the Permit Appealed checbox and enter&amp;nbsp;the Appeal End Date.&lt;/p&gt;
+
+&lt;p&gt;When the appeal period is over and permit is approved, clear the Permit Appealed Checkbox.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;That is the end of this Trackor Tour.&lt;/p&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552349</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;If the permit is appealed, check the Permit Appealed checbox and enter&amp;nbsp;the Appeal End Date.&lt;/p&gt;
+
+&lt;p&gt;When the appeal period is over and permit is approved, clear the Permit Appealed Checkbox.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;That is the end of this Trackor Tour.&lt;/p&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552349</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;If the permit is appealed, check the Permit Appealed checbox and enter&amp;nbsp;the Appeal End Date.&lt;/p&gt;
+
+&lt;p&gt;When the appeal period is over and permit is approved, clear the Permit Appealed Checkbox.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;That is the end of this Trackor Tour.&lt;/p&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552349</APP_LABEL_ID>
+      <LABEL_TEXT>&lt;p&gt;If the permit is appealed, check the Permit Appealed checbox and enter&amp;nbsp;the Appeal End Date.&lt;/p&gt;
+
+&lt;p&gt;When the appeal period is over and permit is approved, clear the Permit Appealed Checkbox.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;That is the end of this Trackor Tour.&lt;/p&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+</LABEL_TEXT>
+     </T_LABEL>
+    </CONTENT_LABEL>
+    <ELEMENT_ID>idx81</ELEMENT_ID>
+    <PLACEMENT>right</PLACEMENT>
+    <ORPHANED>0</ORPHANED>
+    <BACKDROP>0</BACKDROP>
+    <ELEMENT_NAME>fe1000067245_1</ELEMENT_NAME>
+    <ELEMENT_TYPE_ID>2</ELEMENT_TYPE_ID>
+    <FORM_NUMBER>CF131001</FORM_NUMBER>
+   </T_BPL_TOUR_STEP>
+  </TOUR_STEPS>
+  <BPD_ITEMS>
+   <T_BPD_ITEM>
+    <ITEM_ID>1000913891907</ITEM_ID>
+    <PKEY>1001008801</PKEY>
+    <ITEM_TYPE_ID>46</ITEM_TYPE_ID>
+    <ITEM_STATUS_ID>1</ITEM_STATUS_ID>
+    <BLOB_DATA/>
+    <PROGRAM_ID>1000980282</PROGRAM_ID>
+    <APP_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>0</APP_LANG_ID>
+      <APP_LABEL_ID>-5552351</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>1</APP_LANG_ID>
+      <APP_LABEL_ID>-5552351</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>5</APP_LANG_ID>
+      <APP_LABEL_ID>-5552351</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>10</APP_LANG_ID>
+      <APP_LABEL_ID>-5552351</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+     </T_LABEL>
+     <T_LABEL>
+      <APP_LANG_ID>20</APP_LANG_ID>
+      <APP_LABEL_ID>-5552351</APP_LABEL_ID>
+      <LABEL_TEXT>Permit Tracker Tab Overview</LABEL_TEXT>
+     </T_LABEL>
+    </APP_LABEL>
+   </T_BPD_ITEM>
+  </BPD_ITEMS>
+  <PROGRAM_ID>1000980282</PROGRAM_ID>
+  <COMPONENT_PACKAGES>
+   <T_BPL_COMP_PKG>
+    <COMPONENT_ID>10</COMPONENT_ID>
+    <OBJECT_ID>1001008801</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191715</COMPONENTS_PACKAGE_ID>
+    <NAME>Permit Management</NAME>
+    <PROGRAM_ID>1000980282</PROGRAM_ID>
+    <BPD_ITEMS/>
+    <IS_LOCKED>0</IS_LOCKED>
+   </T_BPL_COMP_PKG>
+  </COMPONENT_PACKAGES>
+ </TRACKOR_TOURS_ITEM>
+</TRACKOR_TOURS>
+</COMPONENTS>
