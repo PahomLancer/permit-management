@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="clear program case 166677 13_admin" description="" name="test.onevizion.com_BPL_02212023145932.xml" site="http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080" ts="" ><DB_PACKAGES>
+<?xml version="1.0" encoding="UTF-8"?><COMPONENTS author="clear program case 166677 20_admin" description="" name="test.onevizion.com_BPL_05172023171412.xml" site="http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080" ts="" ><DB_PACKAGES>
  <DB_PACKAGES_ITEM>
   <DB_PKG_NAME>PERMGMT_PERMIT_MANAGMENT</DB_PKG_NAME>
   <PKG_NAME>PERMGMT_PERMIT_MANAGMENT</PKG_NAME>
@@ -26,18 +26,18 @@ as
     /*
     Used objects
     trackor type
-    id.permits.tt
+    id.permit.tt
     id.project.tt
     fields
-    id.permits.cf.prm_permit_countdown
-    id.permits.cf.prm_permit_expected
-    id.permits.cf.prm_permit_status
-    id.permits.cf.prm_permit_age
-    id.permits.cf.prm_permit_cycle_time
-    id.permits.cf.prm_expiration_date
-    id.permits.cf.prm_permit_expires_before_cx_s
-    id.permits.cf.prm_days_to_expiration
-    id.permits.cf.prm_permit_expired
+    id.permit.cf.prm_permit_countdown
+    id.permit.cf.prm_permit_expected
+    id.permit.cf.prm_permit_status
+    id.permit.cf.prm_permit_age
+    id.permit.cf.prm_permit_cycle_time
+    id.permit.cf.prm_expiration_date
+    id.permit.cf.prm_permit_expires_before_cx_s
+    id.permit.cf.prm_days_to_expiration
+    id.permit.cf.prm_permit_expired
     workplan
     Permit Workplan
      */
@@ -62,18 +62,18 @@ as
                and rownum = 1;
         exception
             when no_data_found then
-                util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown, null);
-                util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, null, 1);
+                util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_countdown, null);
+                util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, null, 1);
                 return;
         end;
         
         v_300_af := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 300, &apos;A&apos;, &apos;F&apos;);
 
-        if util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected)
+        if util.getvalnumbyid(p_permit_id, id.permit.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected)
         or v_300_af is null 
         then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown, null);
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, null, 1);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_countdown, null);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, null, 1);
             return;
         end if;
         
@@ -81,9 +81,9 @@ as
         v_500_pf := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 500, &apos;P&apos;, &apos;F&apos;);
 
         if v_500_af is not null then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_countdown, 0);
         else
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown, round(v_500_pf - current_date));
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_countdown, round(v_500_pf - current_date));
         end if;
     end calc_permit_countdown_and_expected;
     
@@ -104,35 +104,35 @@ as
                and rownum = 1;
         exception
             when no_data_found then
-                util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, null, 1);
+                util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, null, 1);
                 return;
         end;
         
         v_500_af := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 500, &apos;A&apos;, &apos;F&apos;);
         v_300_af := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 300, &apos;A&apos;, &apos;F&apos;);
-        v_permit_countdown := util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_countdown);
+        v_permit_countdown := util.getvalnumbyid(p_permit_id, id.permit.cf.prm_permit_countdown);
 
-        if util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected)
+        if util.getvalnumbyid(p_permit_id, id.permit.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected)
         or v_500_af is not null
         or v_300_af is null
         or v_permit_countdown is null
         then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, null, 1);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, null, 1);
             return;
         end if;
         
         case when v_permit_countdown &lt; 0 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.past_due, 1);
+                 util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.past_due, 1);
              when v_permit_countdown &lt;= 7 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.seven_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.seven_days, 1);
              when v_permit_countdown &lt;= 30 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.thirty_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.thirty_days, 1);
              when v_permit_countdown &lt;= 60 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.sixty_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.sixty_days, 1);
              when v_permit_countdown &lt;= 90 then
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.ninety_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.ninety_days, 1);
              else
-                 util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.over_ninety_days, 1);
+                 util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expected, id.vt.permgmt_prm_permits_due.over_ninety_days, 1);
         end case;
     end calc_permit_expected;
     
@@ -152,7 +152,7 @@ as
                and rownum = 1;
         exception
             when no_data_found then
-                util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_age, null);
+                util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_age, null);
                 return;
         end;
         
@@ -161,11 +161,11 @@ as
 
         if v_300_af is null 
         or v_500_af is not null
-        or util.getvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected) 
+        or util.getvalnumbyid(p_permit_id, id.permit.cf.prm_permit_status) in (id.vt.permgmt_prm_permit_status.cancelled, id.vt.permgmt_prm_permit_status.rejected) 
         then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_age, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_age, 0);
         else
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_age, round(current_date - v_300_af));
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_age, round(current_date - v_300_af));
         end if;
     end calc_permit_age;
     
@@ -185,17 +185,17 @@ as
                and rownum = 1;
         exception
             when no_data_found then
-                util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_cycle_time, 0);
+                util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_cycle_time, 0);
                 return;
         end;
         v_300_af := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 300, &apos;A&apos;, &apos;F&apos;);
         v_500_pf := util.gettaskdatebyorddateonly(v_wp_id, p_permit_id, 500, &apos;P&apos;, &apos;F&apos;);
 
         if v_300_af is null then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_cycle_time, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_cycle_time, 0);
             return;
         end if;
-        util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_cycle_time, round(v_500_pf - v_300_af));
+        util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_cycle_time, round(v_500_pf - v_300_af));
     end calc_permit_cycle_time;
     
     procedure calc_permit_expires_before_cx_s(
@@ -205,20 +205,20 @@ as
     as
         v_exp_date date;
     begin
-        v_exp_date := util.getvaldatebyid(p_permit_id, id.permits.cf.prm_expiration_date);
+        v_exp_date := util.getvaldatebyid(p_permit_id, id.permit.cf.prm_expiration_date);
 
         if p_fa_date is not null 
         or p_fp_date is null 
         or v_exp_date is null 
         then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expires_before_cx_s, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expires_before_cx_s, 0);
             return;
         end if;
 
         if v_exp_date &lt; p_fp_date then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expires_before_cx_s, 1);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expires_before_cx_s, 1);
         else
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expires_before_cx_s, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expires_before_cx_s, 0);
         end if;
     end calc_permit_expires_before_cx_s;
     
@@ -228,11 +228,11 @@ as
         v_exp_date date;
         v_parent_id number;
     begin
-        v_exp_date := util.getvaldatebyid(p_permit_id, id.permits.cf.prm_expiration_date);
+        v_exp_date := util.getvaldatebyid(p_permit_id, id.permit.cf.prm_expiration_date);
 
         if v_exp_date is null then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expired, 0);
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_days_to_expiration, null);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expired, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_days_to_expiration, null);
             return;
         end if;
         v_parent_id := util.getparentbyid(p_permit_id, id.project.tt);
@@ -249,17 +249,17 @@ as
         end;
 
         if v_task_date is not null then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expired, 0);
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_days_to_expiration, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expired, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_days_to_expiration, 0);
             return;
         end if;
 
         if v_exp_date &gt; current_date then
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expired, 0);
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_days_to_expiration, round(v_exp_date - current_date));
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expired, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_days_to_expiration, round(v_exp_date - current_date));
         else
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_expired, 1);
-            util.setvalnumbyid(p_permit_id, id.permits.cf.prm_days_to_expiration, 0);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_expired, 1);
+            util.setvalnumbyid(p_permit_id, id.permit.cf.prm_days_to_expiration, 0);
         end if;
     end calc_permit_expired_and_days_to_expiration;
     
@@ -283,20 +283,20 @@ as
         loop
             util.settaskdate(rec.wp_task_id, &apos;A&apos;, &apos;F&apos;, current_date, 1);
         end loop;
-        util.setvalnumbyid(p_permit_id, id.permits.cf.prm_permit_status, id.vt.permgmt_prm_permit_status.in_progress, 1);
+        util.setvalnumbyid(p_permit_id, id.permit.cf.prm_permit_status, id.vt.permgmt_prm_permit_status.in_progress, 1);
     end new_permit;
 
 end permgmt_permit_managment;</DB_PACKAGE_BODY>
-  <DB_PACKAGE_ID>10065601</DB_PACKAGE_ID>
-  <PROGRAM_ID>1000980202</PROGRAM_ID>
+  <DB_PACKAGE_ID>10065761</DB_PACKAGE_ID>
+  <PROGRAM_ID>1000980402</PROGRAM_ID>
   <BPD_ITEMS/>
   <COMPONENT_PACKAGES>
    <T_BPL_COMP_PKG>
     <COMPONENT_ID>27</COMPONENT_ID>
-    <OBJECT_ID>10065601</OBJECT_ID>
-    <COMPONENTS_PACKAGE_ID>191635</COMPONENTS_PACKAGE_ID>
+    <OBJECT_ID>10065761</OBJECT_ID>
+    <COMPONENTS_PACKAGE_ID>191835</COMPONENTS_PACKAGE_ID>
     <NAME>Permit Management</NAME>
-    <PROGRAM_ID>1000980202</PROGRAM_ID>
+    <PROGRAM_ID>1000980402</PROGRAM_ID>
     <BPD_ITEMS/>
     <IS_LOCKED>0</IS_LOCKED>
    </T_BPL_COMP_PKG>
